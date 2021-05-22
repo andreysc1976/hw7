@@ -17,16 +17,8 @@ public class Plate {
         return eatCount;
     }
 
-    public void setEatCount(int eatCount) {
-        this.eatCount = eatCount;
-    }
-
     public int getPlateSize() {
         return plateSize;
-    }
-
-    public void setPlateSize(int plateSize) {
-        this.plateSize = plateSize;
     }
 
     public boolean getEat(int size){
