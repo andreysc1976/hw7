@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
         HordeOfCats hordeOfCats = new HordeOfCats();
         Random random = new Random();
-        Plate plate = new Plate(20+random.nextInt(40)); //тарелка от 20 до 59
-        plate.addEat(plate.getPlateSize()/2 + random.nextInt(plate.getPlateSize())/2);
+        Plate plate = new Plate(50+random.nextInt(50)); //тарелка от 20 до 59
+        plate.addEat(plate.getPlateSize()*(2/3) + random.nextInt(plate.getPlateSize()/3));
         for (int i = 0; i < TEST_COUNT; i++) {
             Cat cat = new Cat("Кот №-"+i,5+random.nextInt(5));//создадим кота с размером желудка от 15 до 19
             hordeOfCats.addCat(cat);
@@ -18,7 +18,7 @@ public class Main {
                 System.out.println(hordeOfCats.getCatByIndex(i));
                 System.out.println(plate.getEatCount());
             } else {
-
+                System.out.println("ошибка поедания еды");
             }
         }
 
