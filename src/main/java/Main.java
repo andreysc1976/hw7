@@ -14,9 +14,12 @@ public class Main {
         }
 
         for (int i = 0; i < TEST_COUNT ; i++) {
-            hordeOfCats.getCatByIndex(i).eat(plate);
-            System.out.println(hordeOfCats.getCatByIndex(i));
-            System.out.println(plate.getEatCount());
+            if (hordeOfCats.getCatByIndex(i).eat(plate)) {
+                System.out.println(hordeOfCats.getCatByIndex(i));
+                System.out.println(plate.getEatCount());
+            } else {
+
+            }
         }
 
 
