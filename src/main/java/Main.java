@@ -14,9 +14,10 @@ public class Main {
         }
 
         for (int i = 0; i < TEST_COUNT ; i++) {
-            if (hordeOfCats.getCatByIndex(i).eat(plate)) {
-                System.out.printf("В тарелке %d еды\n",plate.getEatCount());
-                System.out.println(hordeOfCats.getCatByIndex(i));
+            System.out.printf("В тарелке %d еды\n",plate.getEatCount());
+            Cat cat =hordeOfCats.getCatByIndex(i);
+            if (cat.eat(plate)) {
+                System.out.println(cat);
                 System.out.printf("Он съел %d килограмм еды\n",hordeOfCats.getCatByIndex(i).getSizeStomach());
             } else {
                 System.out.println("ошибка поедания еды");
