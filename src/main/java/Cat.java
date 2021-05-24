@@ -1,11 +1,15 @@
-public class Cat {
+public class Cat extends Animal{
     private boolean satiety = false;
     private String name;
     private int sizeStomach;
 
     public Cat(String name,int sizeStomach) {
-        this.name = name;
+        super(name);
         this.sizeStomach = sizeStomach;
+    }
+
+    public int getSizeStomach() {
+        return sizeStomach;
     }
 
     public boolean eat(Plate plate){
@@ -24,6 +28,21 @@ public class Cat {
         if (satiety){
             sufSatiety="сытый";
         } else {sufSatiety="голодный";}
-        return String.format("%s и он %s",name,sufSatiety);
+        return String.format("Это %s и он %s",super.getName(),sufSatiety);
+    }
+
+    @Override
+    public void run(int lehgth) {
+
+    }
+
+    @Override
+    public void swimming(int length) {
+
+    }
+
+    @Override
+    public void jump(float heigth) {
+
     }
 }
