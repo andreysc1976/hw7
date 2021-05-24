@@ -17,8 +17,8 @@ public class Main {
             System.out.printf("В тарелке %d еды\n",plate.getEatCount());
             Cat cat =hordeOfCats.getCatByIndex(i);
             if (cat.eat(plate)) {
-                System.out.println(cat);
-                System.out.printf("Он съел %d килограмм еды\n",hordeOfCats.getCatByIndex(i).getSizeStomach());
+                System.out.print(cat);
+                System.out.printf(", он съел %d килограмм еды\n",hordeOfCats.getCatByIndex(i).getSizeStomach());
             } else {
                 System.out.println("ошибка поедания еды");
             }
