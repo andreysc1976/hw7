@@ -19,7 +19,6 @@ public abstract class Animal {
             return countAnimal;
         }
 
-    public abstract boolean eat(Plate plate);
 }
 
 
